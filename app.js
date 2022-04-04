@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 const handlebars = require('express-handlebars');
 const cookieParser = require('cookie-parser');
 const flash = require('express-flash');
-const session = require('express-session');
+const session = require('cookie-session');
 const methodOverride = require('method-override');
 const passport = require('passport');
 const getUsers = require('./client/src/users_routes/getUsers');
@@ -26,7 +26,7 @@ app.set('views', path.join(__dirname, './client/views'));
 app.use(express.static('./client/public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser(process.env.COOKIE_SECRET));
+app.use(cookieParser());
 app.use(flash());
 app.use(session({
   secret: process.env.SESSION_SECRET,
