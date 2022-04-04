@@ -1,0 +1,21 @@
+<div class="block"><br>
+        {{#if successMessage }}
+            <h2>{{successMessage}}</h2>
+        {{/if}}
+        {{#if messages.error }}
+            <h2>{{ messages.error }}</h2>
+        {{/if}}
+    <h2 class="login-page">Bienvenido a Haru México!</h2><br>
+    <form action="/login" method="POST">
+            <div class="login-fields">
+                <label for="email">Email </label><br>
+                <input class="login-fields" type="email" id="email" name="email" required>
+            </div><br>
+            <div class="login-fields">
+                <label for="password">Password </label><br>
+                <input class="login-fields" type="password" id="password" name="password" required>
+        </div><br>
+        <button class="btn-login" type="submit">Login</button>
+    </form><br>
+    <a href="/register">Register</a>
+</div>

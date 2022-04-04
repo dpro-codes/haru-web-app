@@ -1,0 +1,56 @@
+<header class="main-header-admin">
+  <nav class="main-nav-admin nav-admin">
+    <ul>
+      <li><a href="/admin/coaches">Coaches</a></li>
+      <li><a href="/admin/courses">Courses</a></li>
+      <li><a href="/admin/users">Users</a></li>
+      <li><a>
+          <form action="/admin/logout?_method=DELETE" method="POST">
+            <button type="submit" class="btn-logout-admin">Log out</button>
+          </form>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header><br><br>
+<div class="table-responsive">
+  <h2 class="admin-page">Delete Course</h2>
+  <form method="post" action='/admin/courses/delete'>
+    <table class="table table-condensed">
+      <tbody>
+        <tr>
+          <th>Course Name: </td>
+          <td>{{data.courseName}}</td>
+        </tr>
+        <tr>
+          <th>Course Description: </td>
+          <td>{{data.courseDescription}}</td>
+        </tr>
+        <tr>
+          <th>Course Instructor: </td>
+          <td>{{data.courseInstructor}}</td>
+        </tr>
+        <tr>
+          <th>Price: </td>
+          <td>{{data.coursePrice}}</td>
+        </tr>
+        <tr>
+          <th>Video: </td>
+          <td>{{data.courseVideo}}</td>
+        </tr>
+        <input type="hidden" name="id" value="{{data.courseID}}">
+       
+      </tbody>
+      <tfooter>
+        <tr>
+          <td></td>
+          <td>
+              <input type="submit" value="OK" class="btn btn-success">
+              <input type="button" value="Cancel" class="btn btn-danger"
+                  class="cancel" onclick="cancelCourseDelete()">
+          </td>
+        </tr>
+      </tfooter>
+    </table>
+  </form>
+</div>

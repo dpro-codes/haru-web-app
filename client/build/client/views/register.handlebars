@@ -1,0 +1,30 @@
+<div class="block">
+    <h2 class="login-page">Register</h2>
+</div>
+<div class="block">
+    <form action="/register" method="POST">
+        <div class="login-fields">
+            <br><label for="firstName">First Name</label><br>
+            <input class="login-fields" type="text" id="firstName" name="firstName" required>
+        </div>
+        <div class="login-fields">
+            <br><label for="lastName">Last Name</label><br>
+            <input class="login-fields" type="text" id="lastName" name="lastName" required>
+        </div>
+        <div class="login-fields">
+            <br><label for="email">Email</label><br>
+            <input class="login-fields" type="email" id="email" name="email" required>
+        </div>
+        <div class="login-fields">
+            <br><label for="password">Password</label><br>
+            <input class="login-fields" type="password" id="password" name="password" required>
+        </div>
+        <span class="login-fields">
+        {{#if failureMessage }}
+            <h4 class="register-page">{{failureMessage}}</h4>
+        {{/if}}
+    </span>
+        <button class="btn-register" type="submit">Sign Up</button><br>
+    </form>
+    <p><a href="/login">Login</a></p>
+</div>

@@ -1,0 +1,62 @@
+<h2 class="user-message">REST API Endpoints</h2><br>
+<header class="main-header">
+    <nav class="main-nav nav">
+        <ul>
+            <li><a href="/coaches">Coaches</a></li>
+            <li><a href="/store">Store</a></li>
+            <li><a href="/mycourses">My Courses</a></li>
+            <li><a href="/api">Rest API</a></li>
+            <li><a>
+                    <form action="/logout?_method=DELETE" method="POST">
+                        <button type="submit" class="btn-logout">Log out</button>
+                    </form>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<section class="api-block">
+    <form action="/api/courses/json" method="GET" class="api-block">
+        <button class="api-block" type="submit">Courses in JSON</button>
+    </form>
+    <form action="/api/courses/xml" method="GET" class="api-block">
+        <button class="api-block" type="submit">Courses in XML</button>
+    </form><br>
+
+    <form action="/api/coaches/json" method="GET" class="api-block">
+        <button class="api-block" type="submit">Coaches in JSON</button>
+    </form>
+    <form action="/api/coaches/xml" method="GET" class="api-block">
+        <button class="api-block" type="submit">Coaches in XML</button>
+    </form><br>
+
+    <form action="/api/users/json" method="GET" class="api-block">
+        <button class="api-block" type="submit">Users in JSON</button>
+    </form>
+    <form action="/api/users/xml" method="GET" class="api-block">
+        <button class="api-block" type="submit">Users in XML</button>
+    </form><br>
+    <!-- JQUERY + AJAX Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#emailAddress").on('keyup',function(){
+            $.ajax({
+            type: 'post',
+            url: 'http://localhost:3000/api/AJAXrequest',
+            data: {emailAddress: $(this).val()},
+            success: function(data) {
+                $("#display").html(data);
+            }
+            });
+        });
+    });
+    </script><br>
+    <div class="api-field"> User by Email Address:<br>
+        <input id="emailAddress" class="input-field" name="emailAddress" type="email" size="15" ></input><br><span id="display"></span></div>
+</section>
+
+
+
+
+

@@ -1,0 +1,52 @@
+<header class="main-header-admin">
+  <nav class="main-nav-admin nav-admin">
+    <ul>
+      <li><a href="/admin/coaches">Coaches</a></li>
+      <li><a href="/admin/courses">Courses</a></li>
+      <li><a href="/admin/users">Users</a></li>
+      <li><a>
+          <form action="/admin/logout?_method=DELETE" method="POST">
+            <button type="submit" class="btn-logout-admin">Log out</button>
+          </form>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header><br><br>
+<div class="block table-responsive">
+  <h2 class="admin-page">Delete Coach</h2>
+  <form method="post" action='/admin/coaches/delete'>
+    <table class="table table-condensed">
+      <tbody>
+        <tr>
+          <th>First Name: </td>
+          <td>{{data.firstName}}</td>
+        </tr>
+        <tr>
+          <th>Last Name: </td>
+          <td>{{data.lastName}}</td>
+        </tr>
+        <tr>
+          <th>Email Address: </td>
+          <td>{{data.emailAddress}}</td>
+        </tr>
+        <tr>
+          <th>Certifications: </td>
+          <td>{{data.certifications}}</td>
+        </tr>
+        <input type="hidden" name="id" value="{{data.id}}">
+       
+      </tbody>
+      <tfooter>
+        <tr>
+          <td></td>
+          <td>
+              <input type="submit" value="OK" class="btn btn-success">
+              <input type="button" value="Cancel" class="btn btn-danger"
+                  class="cancel" onclick="cancelCoachDelete()">
+          </td>
+        </tr>
+      </tfooter>
+    </table>
+  </form>
+</div>

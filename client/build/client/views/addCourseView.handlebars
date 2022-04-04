@@ -1,0 +1,64 @@
+ 	<div>
+   <header class="main-header-admin">
+		<nav class="main-nav-admin nav-admin">
+			<ul>
+				<li><a href="/admin/coaches">Coaches</a></li>
+				<li><a href="/admin/courses">Courses</a></li>
+				<li><a href="/admin/users">Users</a></li>
+				<li><a>
+						<form action="/admin/logout?_method=DELETE" method="POST">
+							<button type="submit" class="btn-logout-admin">Log out</button>
+						</form>
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</header><br><br>
+  <div class="block table-responsive">
+    <h2 class="admin-page">Add New Course</h2>
+    <form method="post" action="/admin/courses/add">
+      <table class="table table-condensed">
+        <tbody>
+        
+        <tr>
+          <th>Course Name: </th>
+          <td><input type="text" name="name" required 
+                placeholder="Enter name"></td>
+        </tr>
+        <tr>
+          <th>Course Description: </th>
+          <td><input type="text" name="description" required 
+                placeholder="Enter description"></td>
+        </tr>
+        <tr>
+          <th>Course Instructor: </th>
+          <td><input type="text" name="instructor" required 
+                placeholder="Enter instructor"></td>
+        </tr>
+        <tr>
+          <th>Price: </th>
+          <td><input type="number" step="any" name="price" required 
+                placeholder="Enter number"></td>
+        </tr>
+          <tr>
+          <th>Video: </th>
+          <td><input type="text" name="video" required 
+                placeholder="Enter URL"></td>
+        </tr>
+        
+        </tbody>
+        <tfooter>
+          <tr>
+            <td></td>
+            <td>
+            <input type="submit" value="Save" 
+                class="btn btn-success">
+            <input type="button" value="Cancel" 
+                class="btn btn-danger" onclick="cancelCourseAdd()">
+            </td>
+          </tr>
+        </tfooter>
+      </table>
+    </form>
+  </div>
+</div>

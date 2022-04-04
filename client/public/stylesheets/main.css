@@ -1,0 +1,603 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700');
+@import url("https://fonts.googleapis.com/css?family=Metal+Mania");
+
+* {
+    box-sizing: border-box;
+    font-family: Raleway;
+    color: #777;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+.nav ul {
+    margin: 0;
+}
+.nav-admin ul {
+    margin: 0;
+}
+
+.nav li {
+    display: inline;
+}
+.nav-admin li {
+    display: inline;
+}
+
+.nav a {
+    display: inline-block;
+    padding: .5em;
+    color: white;
+    text-decoration: none;
+}
+.nav-admin a {
+    display: inline-block;
+    padding: .5em;
+    color: white;
+    text-decoration: none;
+}
+
+.main-nav {
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-bottom: 1px solid #ED1C24
+}
+.main-nav-admin {
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-bottom: 1px solid #64C8D0
+}
+
+.main-nav li {
+    padding: 0 5%;
+}
+.main-nav-admin li {
+    padding: 0 5%;
+}
+
+.nav a:hover {
+    background-color: #ED1C24;
+}
+.nav-admin a:hover {
+    color: white;
+    background-color: #64C8D0
+}
+
+.main-header {
+    background-color: #ED1C24;
+    background-image: url("Images/Header Background.jpg");
+    background-blend-mode: multiply;
+    background-size: cover;
+}
+.main-header-admin {
+    background-color: #64C8D0;
+    background-image: url("Images/Header Background.jpg");
+    background-blend-mode: multiply;
+    background-size: cover;
+}
+
+
+.band-name {
+    text-align: center;
+    margin: 0;
+    font-size: 4em;
+    font-family: "Booter - Zero Zero";
+    font-weight: normal;
+    color: white;
+}
+
+.band-name-large {
+    font-size: 8em;
+}
+
+.content-section {
+    margin: 1em;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5em;
+    text-align: center;
+    align-content: center;
+}
+.section-header {
+    font-family: "Metal Mania";
+    font-weight: normal;
+    color: #333;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.about-band-image {
+    float: left;
+    height: 200px;
+    width: 200px;
+    margin: 15px;
+    border-radius: 50%;
+}
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+#content-wrap {
+    padding-bottom: 6rem;    /* Footer height */
+  }
+
+.main-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 6rem;            /* Footer height */
+    background-color: #808080;
+    color: white;
+    position: absolute;
+    align-items: center;
+    text-align: center;
+    padding-top: 17px;
+}
+.main-footer h4{
+    color: white;
+    margin: 0;
+}
+.admin-footer h4{
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 2em;
+    margin: 0;
+}
+.admin-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 8rem;            /* Footer height */
+    background-color: #808080;
+    color: white;
+    position: absolute;
+    align-items: center;
+    text-align: center;
+    padding-top: 17px;
+}
+.admin-footer h4{
+    color: white;
+    margin: 0;
+}
+
+.footer-nav {
+    margin: 0;
+    padding: 0;
+}
+.footer-nav img {
+    width: 30px;
+    height: 30px;
+}
+
+
+.btn {
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em .67em;
+    cursor: pointer;
+}
+
+.btn:focus {
+    outline:0;
+    border: none;
+    box-shadow: none;
+}
+
+.btn-header {
+    margin: .5em 15% 2em 15%;
+    color: white;
+    border: 2px solid #64C8D0;
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 0;
+    font-size: 1.5em;
+    font-weight: lighter;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.btn-header:hover {
+    background-color: rgba(255, 255, 255, .3);
+}
+
+.btn-play {
+    display: block;
+    margin: 0 auto;
+    color: #64C8D0;
+    font-size: 4em;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    text-align: center;
+    outline:0;
+}
+
+.btn-primary {
+    color: white;
+    background-color: #64C8D0;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+    outline:0;
+}
+
+.btn-primary:hover {
+    background-color: #64C8D0;
+}
+
+.tour-row {
+    border-bottom: 1px solid black;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+}
+
+.tour-row:last-child {
+    border: none;
+}
+
+.tour-item {
+    display: inline-block;
+    padding-right: .5em;
+}
+
+.tour-date {
+    color: #555;
+    width: 11%;
+    font-weight: bold;
+}
+
+.tour-city {
+    width: 24%;
+}
+
+.tour-arena {
+    width: 42%;
+}
+
+.tour-btn {
+    max-width: 19%;
+}
+
+.shop-items {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.shop-item {
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    max-width: 45%;
+    text-decoration: none;
+    max-width: 450px;
+    height: 500px;
+    margin: 10px auto 20px auto;
+    padding: 0px 0px 0px 0px;
+}
+
+.shop-item-title {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.shop-item-image {
+    height: 250px;
+}
+
+.shop-item-details {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.shop-item-price {
+    flex-grow: 1;
+    color: #333;
+}
+
+.cart-header {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #333;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    width: 300px;
+}
+
+.cart-column {
+    width: 400px;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin: 10px 50px 0px 50px;
+    padding: 0px 80px 10px 80px;
+    align-content: center;
+    text-align: center;
+}
+
+.cart-row {
+    display: block;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+.cart-items-div {
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+.cart-items-div {
+    display: inline-block;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+.cart-items-div-price {
+    display: inline-block;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+.cart-item {
+    width: 300px;
+    font-size: 1em;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+.cart-price {
+    width: 300px;
+    font-size: 1em;
+    color: #333;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+.cart-item-title {
+    color: #333;
+    margin-left: .5em;
+    font-size: 1.2em;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+.cart-item-image {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.btn-danger {
+    color: white;
+    background-color: #EB5757;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-danger:hover {
+    background-color: #CC4C4C;
+}
+
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #64C8D0;
+    background-color: #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
+
+
+.cart-total {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 10px;
+    margin-left: 220px;
+}
+
+.cart-total-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: black;
+    margin-right: 20px;
+}
+
+.cart-total-price {
+    color: #333;
+    font-size: 1.1em;
+}
+
+.btn-purchase {
+    display: block;
+    margin: 40px auto 80px auto;
+    font-size: 1.25em;
+}
+
+.block {
+    width: 500px;
+    height: auto;
+    margin: auto;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+.block p a {
+    color: black;
+}
+.coaches-main-block {
+    margin: auto;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+.coaches-block {
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    padding: 0px 15px 0px 15px;
+}
+
+.btn-login {
+    color: white;
+    background-color: #ED1C24;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+    width: 80px;
+    height: 25px;
+    margin-top: 10px;
+}
+.btn-admin {
+    color: white;
+    background-color: #64C8D0;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+    width: 80px;
+    height: 25px;
+    margin-top: 10px;
+}
+.btn-register {
+    color: white;
+    background-color: #ED1C24;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+    width: 80px;
+    height: 25px;
+    margin-top: 15px;
+}
+.btn-logout {
+    color: white;
+    background-color: #ED1C24;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    border-left: #eee solid 2px;
+    border-right: #eee solid 2px;
+    border-top: #eee solid 2px;
+    border-bottom: #eee solid 2px;
+    cursor: pointer;
+}
+.btn-logout-admin {
+    color: white;
+    background-color: #64C8D0;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    border-left: #eee solid 2px;
+    border-right: #eee solid 2px;
+    border-top: #eee solid 2px;
+    border-bottom: #eee solid 2px;
+    cursor: pointer;
+}
+
+input.login-fields {
+    border-radius: 5px;
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    margin-top: 10px;
+    outline:0;
+}
+input.input-field {
+    border-radius: 5px;
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    margin-top: 10px;
+    outline:0;
+    color: black;
+}
+.login-fields label {
+    color: black;
+}
+div.api-field {
+    color: black;
+    margin-top: 5px;
+    text-align: center;
+}
+h2.admin-page {
+    color: #65C8D0;
+    margin-left: 50px;
+}
+h2.admin-title {
+    color: #65C8D0;
+
+}
+h2.login-page {
+    color: #ED1C24;
+}
+h4.register-page {
+    color: #ED1C24;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+h2.user-message {
+    width: 500px;
+    margin: auto;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+.api-block {
+    margin: auto;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    margin-top: 15px;
+}
+
+button.api-block {
+    color: white;
+    background-color: #2C313C;
+    border: none;
+    border-radius: .3em;
+    width: 200px;
+    height: 40px;
+    cursor:pointer;
+    font-size: 16px;
+}
+button.api-block:hover {
+    color: #2C313C;
+    background-color: white;
+    border: 2px solid #2C313C ;
+    border-radius: .3em;
+    width: 200px;
+    height: 40px;
+    cursor:pointer;
+    font-size: 16px;
+}
+
+.api-block form{
+    display: inline-block;
+    text-decoration: none;
+    padding: 0px 30px 0px 30px;
+}
+

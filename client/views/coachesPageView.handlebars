@@ -1,0 +1,28 @@
+<div>
+    <h2 class="user-message">Welcome {{firstName}}!</h2><br>
+    <header class="main-header">
+    <nav class="main-nav nav">
+        <ul>
+            <li><a href="/coaches">Coaches</a></li>
+            <li><a href="/store">Store</a></li>
+            <li><a href="/mycourses">My Courses</a></li>
+            <li><a href="/api">Rest API</a></li>
+            <li><a>
+                    <form action="/logout?_method=DELETE" method="POST">
+                        <button type="submit" class="btn-logout">Log out</button>
+                    </form>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    </header><br>
+        {{#each data}}
+            <div class="coaches-main-block">
+                <div class="coaches-block">
+                    <h3>Coach {{firstName}}</h3>
+                    <img src="/images/coach{{firstName}}.png">
+                    <p><b>Certifications: {{certifications}}</p>
+                </div>
+            </div>
+        {{/each}}
+</div>

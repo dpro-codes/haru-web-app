@@ -1,0 +1,60 @@
+<header class="main-header-admin">
+  <nav class="main-nav-admin nav-admin">
+    <ul>
+      <li><a href="/admin/coaches">Coaches</a></li>
+      <li><a href="/admin/courses">Courses</a></li>
+      <li><a href="/admin/users">Users</a></li>
+      <li><a>
+          <form action="/admin/logout?_method=DELETE" method="POST">
+            <button type="submit" class="btn-logout-admin">Log out</button>
+          </form>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header><br><br>
+<div class="table-responsive">
+  <h2 class="admin-page">Edit Course</h2>
+  <form method="post" action='/admin/courses/edit'>
+    <table class="table table-condensed">
+      <tbody>
+        <tr>
+          <th>Course Name: </td>
+          <td><input type="text" name="name" required size="40" 
+                  value="{{data.courseName}}"></td>
+        </tr>
+        <tr>
+          <th>Course Description: </td>
+          <td><input type="text" name="description" required size="100" 
+                  value="{{data.courseDescription}}"></td>
+        </tr>
+        <tr>
+          <th>Course Instructor: </th>
+          <td><input type="text" name="instructor" required size="40" 
+                  value="{{data.courseInstructor}}"></td>
+       </tr>
+       <tr>
+         <th>Course Price: </th>
+         <td><input type="number" step="any" name="price" required size="40" 
+                  value="{{data.coursePrice}}"></td>
+       </tr>
+              <tr>
+         <th>Course Video: </th>
+         <td><input type="text" name="video" required size="100" 
+                  value="{{data.courseVideo}}"></td>
+       </tr>
+       <input type="hidden" name="id" value="{{data.courseID}}">
+      </tbody>
+      <tfooter>
+        <tr>
+          <td></td>
+          <td>
+              <input type="submit" value="Save" class="btn btn-success">
+              <input type="button" value="Cancel" class="btn btn-danger"
+                  class="cancel" onclick="cancelCourseAdd()">
+          </td>
+        </tr>
+      </tfooter>
+    </table>
+  </form>
+</div>

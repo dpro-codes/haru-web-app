@@ -1,0 +1,25 @@
+<div>
+    {{#if successMessage }}
+        <h1>{{successMessage}}</h1>
+    {{/if}}
+</div>
+<div>
+    {{#if messages.error }}
+        <h1>{{ messages.error }}</h1>
+    {{/if}}
+</div>
+<div class="block"><br>
+    <h2 class="admin-title">Bienvenido Haru Admin!</h2><br>
+    <form action="/admin/login" method="POST">
+            <div class="login-fields">
+                <label for="email">Email </label><br>
+                <input class="login-fields" type="email" id="email" name="email" required>
+            </div><br>
+            <div class="login-fields">
+                <label for="password">Password </label><br>
+                <input class="login-fields" type="password" id="password" name="password" required>
+        </div><br>
+        <button class="btn-admin" type="submit">Login</button>
+    </form><br>
+    <a href="/">User View</a>
+</div>

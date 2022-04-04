@@ -1,0 +1,55 @@
+<header class="main-header-admin">
+  <nav class="main-nav-admin nav-admin">
+    <ul>
+      <li><a href="/admin/coaches">Coaches</a></li>
+      <li><a href="/admin/courses">Courses</a></li>
+      <li><a href="/admin/users">Users</a></li>
+      <li><a>
+          <form action="/admin/logout?_method=DELETE" method="POST">
+            <button type="submit" class="btn-logout-admin">Log out</button>
+          </form>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header><br><br>
+<div class="block table-responsive">
+  <h2 class="admin-page">Edit Coach</h2>
+  <form method="post" action='/admin/coaches/edit'>
+    <table class="table table-condensed">
+      <tbody>
+        <tr>
+          <th>First Name: </td>
+          <td><input type="text" name="fname" required size="40" 
+                  value="{{data.firstName}}"></td>
+        </tr>
+        <tr>
+          <th>Last Name: </td>
+          <td><input type="text" name="lname" required size="40" 
+                  value="{{data.lastName}}"></td>
+        </tr>
+        <tr>
+          <th>Email Address: </th>
+          <td><input type="text" name="email" required size="40" 
+                  value="{{data.emailAddress}}"></td>
+       </tr>
+       <tr>
+         <th>Certifications: </th>
+         <td><input type="text" name="certs" required size="40" 
+                  value="{{data.certifications}}"></td>
+       </tr>
+       <input type="hidden" name="id" value="{{data.id}}">
+      </tbody>
+      <tfooter>
+        <tr>
+          <td></td>
+          <td>
+              <input type="submit" value="Save" class="btn btn-success">
+              <input type="button" value="Cancel" class="btn btn-danger"
+                  class="cancel" onclick="cancelCoachAdd()">
+          </td>
+        </tr>
+      </tfooter>
+    </table>
+  </form>
+</div>

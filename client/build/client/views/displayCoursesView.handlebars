@@ -1,0 +1,55 @@
+<div>
+	<header class="main-header-admin">
+		<nav class="main-nav-admin nav-admin">
+			<ul>
+				<li><a href="/admin/coaches">Coaches</a></li>
+				<li><a href="/admin/courses">Courses</a></li>
+				<li><a href="/admin/users">Users</a></li>
+				<li><a>
+						<form action="/admin/logout?_method=DELETE" method="POST">
+							<button type="submit" class="btn-logout-admin">Log out</button>
+						</form>
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<div class="table-responsive"><br>
+		<h2 class="admin-page">Courses</h2>
+		<table class="table table-condensed">
+			{{#if data}}
+			<thead>
+				<tr>
+					<th>Course Name</th>
+					<th>Description</th>
+					<th>Instructor</th>
+					<th>Price</th>
+					<th></th>
+				</tr>
+			</thead>
+			{{else}}
+			<tr><td colspan="3">No Courses found ... Add One!</td></tr>
+			{{/if}}
+			<tbody>
+				{{#each data}}
+					<tr>
+						<td>{{this.courseName}}</td>
+						<td>{{this.courseDescription}}</td>
+						<td>{{this.courseInstructor}}</td>
+						<td>USD ${{this.coursePrice}}</td>
+						<td>
+							<a href="/admin/courses/edit/{{this.courseID}}">Edit</a> | 
+							<a href="/admin/courses/delete/{{this.courseID}}">Delete</a>
+						</td>
+					</tr>
+				{{/each}}
+			</tbody>
+			<tfooter>
+				<tr><td>
+				<button class="btn btn-primary" 
+						onClick="addCourse();">Add</button>
+				</td></tr>
+			</tfooter>
+		</table>
+	</div>
+</div>
