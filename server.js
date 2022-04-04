@@ -59,6 +59,8 @@ app.use(function(req, res) {
     res.render('404');
 });
 
-app.listen(3000, function(){
+const port = process.env.PORT || 3000;
+
+app.listen(port, function(){
   console.log('http://localhost:3000');
 });
