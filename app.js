@@ -1,3 +1,7 @@
+if (process.env.NODE_ENV !== 'production'){
+  require('dotenv').config()
+}
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const handlebars = require('express-handlebars');
@@ -8,7 +12,7 @@ const methodOverride = require('method-override');
 const passport = require('passport');
 const getUsers = require('./client/src/users_routes/getUsers');
 const path = require('path');
-require('dotenv').config()
+
 
 const app = express();
 
@@ -22,10 +26,10 @@ app.set('views', path.join(__dirname, './client/views'));
 app.use(express.static('./client/public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
+app.use(cookieParser(process.env.COOKIE_SECRET));
 app.use(flash());
 app.use(session({
-  secret: process.env.COOKIESECRET,
+  secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: false}));
 app.use(passport.initialize());
