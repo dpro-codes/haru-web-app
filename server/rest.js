@@ -12,7 +12,8 @@ module.exports.homeAPI = async (req, res ,next) => {
 
 module.exports.coursesJSON = async (req, res ,next) => {
     await DBrequestAPI.getCourses().then(values => {
-        haruCourses = values; console.log(haruCourses);
+        haruCourses = values; 
+        // console.log(haruCourses);
     });
     res.format({
 		'application/json':() => {
@@ -25,7 +26,8 @@ module.exports.coursesJSON = async (req, res ,next) => {
 
 module.exports.coursesXML = async (req, res ,next) => {
     await DBrequestAPI.getCourses().then(values => {
-        haruCourses = values; console.log(haruCourses);
+        haruCourses = values; 
+        // console.log(haruCourses);
     });
     res.format({
         'application/xml':() => {
@@ -52,7 +54,8 @@ module.exports.coursesXML = async (req, res ,next) => {
 
 module.exports.coachesJSON = async (req, res ,next) => {
     await DBrequestAPI.getCoaches().then(values => {
-        haruCoaches = values; console.log(haruCoaches);
+        haruCoaches = values; 
+        // console.log(haruCoaches);
     });
     res.format({
 		'application/json':() => {
@@ -65,7 +68,8 @@ module.exports.coachesJSON = async (req, res ,next) => {
 
 module.exports.coachesXML = async (req, res ,next) => {
     await DBrequestAPI.getCoaches().then(values => {
-        haruCoaches = values; console.log(haruCoaches);
+        haruCoaches = values; 
+        // console.log(haruCoaches);
     });
     res.format({
         'application/xml':() => {
@@ -91,7 +95,8 @@ module.exports.coachesXML = async (req, res ,next) => {
 
 module.exports.usersJSON = async (req, res ,next) => {
     await DBrequestAPI.getUsers().then(values => {
-        haruUsers = values; console.log(haruUsers);
+        haruUsers = values; 
+        // console.log(haruUsers);
     });
     res.format({
 		// Implement the JSON, XML, & HTML formats. It includes a default format option.
@@ -105,7 +110,8 @@ module.exports.usersJSON = async (req, res ,next) => {
 
 module.exports.usersXML = async (req, res ,next) => {
     await DBrequestAPI.getUsers().then(values => {
-        haruUsers = values; console.log(haruUsers);
+        haruUsers = values; 
+        // console.log(haruUsers);
     });
     res.format({
         'application/xml':() => {
@@ -141,7 +147,8 @@ module.exports.userEmailJSON = async (req, res ,next) => {
     console.log(email);
 
     await DBrequestAPI.getUsers().then(values => {
-        haruUsers = values; console.log(haruUsers);
+        haruUsers = values; 
+        // console.log(haruUsers);
     });
     let user = haruUsers.find(user => user.emailAddress === email);
     if (user == null) {res.send("There is no user associated with the email address: " + email +".")}
@@ -159,7 +166,8 @@ module.exports.userEmailXML = async (req, res ,next) => {
     let email = req.params.emailAddress;
     
     await DBrequestAPI.getUsers().then(values => {
-        haruUsers = values; console.log(haruUsers);
+        haruUsers = values; 
+        // console.log(haruUsers);
     });
     let user = haruUsers.find(user => user.emailAddress === email);
     if (user == null) {res.send("There is no user associated with the email address: " + email +".")}

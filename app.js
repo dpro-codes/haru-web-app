@@ -1,4 +1,5 @@
 require('dotenv').config();
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const handlebars = require('express-handlebars');
@@ -37,7 +38,8 @@ app.use(methodOverride('_method'));
 // Gets all users from the database to compare against login credentials
 var users;
 getUsers.DBusers().then(values => {
-  users = values; console.log(users);
+  users = values; 
+  // console.log(users);
 })
 const initializePassport = require('./client/src/users_routes/passport-config');
 initializePassport(
@@ -64,5 +66,5 @@ app.use(function(req, res) {
 const port = process.env.PORT || 3000;
 
 app.listen(port, function(){
-  console.log('http://localhost:3000');
+  console.log('Server running from Port ' + port);
 });

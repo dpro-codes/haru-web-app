@@ -6,7 +6,8 @@ let DBrequestAPI = require("../../../server/DBrequestAPI");
 module.exports = async (req , res , next) => {
     let email = req.body.email;
     await DBrequestAPI.getUsers().then(values => {
-        haruUsers = values; console.log(haruUsers);
+        haruUsers = values; 
+        // console.log(haruUsers);
     });
     let emailTaken = haruUsers.find(user => user.emailAddress === email);
     

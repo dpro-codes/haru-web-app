@@ -1,7 +1,5 @@
 const mongoose = require('mongoose');
 require('dotenv').config()
-const dbUrl = 'mongodb+srv://' + process.env.USERNAME + ':' + process.env.PASSWORD + '@cluster0.k9tky.mongodb.net/harudb?retryWrites=true&w=majority';
-
 
 let connection = null;
 let userModel = null;
@@ -41,7 +39,7 @@ module.exports = {
 	getUsersModel: () => {
 		if (connection == null) {
 			console.log("Creating connection...");
-			connection = mongoose.createConnection(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true });
+			connection = mongoose.createConnection(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 			userModel = connection.model("UserModel", usersSchema);
 			return userModel;
 		} else {
@@ -52,7 +50,7 @@ module.exports = {
 	getCoachesModel: () => {
 		if (connection == null) {
 			console.log("Creating connection...");
-			connection = mongoose.createConnection(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true });
+			connection = mongoose.createConnection(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 			coachModel = connection.model("CoachModel", coachesSchema);
 			return coachModel;
 		} else {
@@ -63,7 +61,7 @@ module.exports = {
 	getCoursesModel: () => {
 		if (connection == null) {
 			console.log("Creating connection...");
-			connection = mongoose.createConnection(dbUrl, { useNewUrlParser: true, useUnifiedTopology: true });
+			connection = mongoose.createConnection(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 			courseModel = connection.model("CourseModel", coursesSchema);
 			return courseModel;
 		} else {

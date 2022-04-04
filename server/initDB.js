@@ -11,7 +11,7 @@ const User = haruDB.getUsersModel();
 
 	await Promise.all([user1.save(), user2.save(), user3.save()]);
 	let currentUsers = await User.find({});
-	console.log(currentUsers);
+	// console.log(currentUsers);
 
 	await Coach.deleteMany({});
 	let coach1 = new Coach({firstName:'Iron',lastName:'Ruiz',emailAddress: 'iron@haru.mx',certifications: [{courseName:'BodyCombat'}]}); 
@@ -21,7 +21,7 @@ const User = haruDB.getUsersModel();
 
 	await Promise.all([coach1.save(), coach2.save(), coach3.save(),	coach4.save()]);
 	let currentCoaches = await Coach.find({});
-	console.log(currentCoaches);
+	// console.log(currentCoaches);
 
 	await Course.deleteMany({});
 	let course1 = new Course({courseName:'BodyPump', courseDescription:'A fast-paced, barbell-based workout that is specifically designed to help you get lean, toned and fit.',courseInstructor: 'Rojo H.', coursePrice: 25.00, courseVideos: 'https://www.youtube.com/embed/ioGhcD4sR6I'}); 
@@ -32,7 +32,7 @@ const User = haruDB.getUsersModel();
 	
 	await Promise.all([course1.save(), course2.save(), course3.save(), course4.save(), course5.save()]);
 	let currentCourses = await Course.find({});
-	console.log(currentCourses);
+	// console.log(currentCourses);
 	
 	process.exit();
 })();

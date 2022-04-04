@@ -18,7 +18,7 @@ module.exports = async (req, res ,next) => {
         }
     });
 
-    console.log(coachesData);
+    // console.log(coachesData);
 
     res.render('coachesPageView',
     {data:coachesData, 
