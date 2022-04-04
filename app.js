@@ -66,5 +66,5 @@ app.use(function(req, res) {
 const port = process.env.PORT || 3000;
 
 app.listen(port, function(){
-  console.log('Server running from Port ' + port);
+  console.log('Server running from Port: ' + port);
 });
